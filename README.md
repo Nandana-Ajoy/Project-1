@@ -18,15 +18,13 @@ The pipeline fetches hourly weather data from the **Open-Meteo API** for Trivand
 
 Project-1/
 │
-
 ├── src/
-
-│ ├── fetch_weather.py 
-│ ├── transform_data.py 
-│ ├── load_to_postgres.py 
-│ ├── raw_weather_data.json 
-│ ├── clean_weather_data.csv 
-│ └── docker-compose.yml 
+ ├── fetch_weather.py 
+ ├── transform_data.py 
+ ├── load_to_postgres.py 
+ ├── raw_weather_data.json 
+ ├── clean_weather_data.csv 
+ └── docker-compose.yml 
 │
 ├── venv/ 
 │ ├── Include/
