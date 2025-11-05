@@ -77,7 +77,9 @@ python src/load_to_postgres.py
 ## Sample CRUD Operations
 
 Insert a city
-```INSERT INTO city_info (city_name, country) VALUES ('Trivandrum', 'India');```
+```
+INSERT INTO city_info (city_name, country) VALUES ('Trivandrum', 'India');
+```
 
 Insert weather data
 ```
@@ -86,15 +88,23 @@ VALUES ('2025-11-05 10:00:00', 29.5, 78, 3.5, 1);
 ```
 
 Query weather data
-```SELECT * FROM weather_data;```
+```
+SELECT * FROM weather_data;
+```
 
 Update temperature
-```UPDATE weather_data SET temperature_c = 32.0 WHERE weather_id = 1;```
+```
+UPDATE weather_data SET temperature_c = 32.0 WHERE weather_id = 1;
+```
 
 Delete a record
-```DELETE FROM weather_data WHERE weather_id = 3;```
+```
+DELETE FROM weather_data WHERE weather_id = 3;
+```
 
 ## References
+```
 Open-Meteo API
 PostgreSQL Documentation
 psycopg2 Documentation
+```
