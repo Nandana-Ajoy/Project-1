@@ -15,7 +15,7 @@ The pipeline fetches hourly weather data from the **Open-Meteo API** for Trivand
 ---
 
 ## Project Structure
-'''
+```
 Project-1/
 │
 ├── src/
@@ -36,7 +36,7 @@ Project-1/
 ├── README.md
 └── requirements.txt
 └── requirements.txt
-'''
+```
 ## Setup Instructions
 
 1. **Clone Repository**
