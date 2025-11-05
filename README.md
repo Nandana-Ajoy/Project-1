@@ -51,10 +51,12 @@ venv\Scripts\activate
 pip install -r requirements.txt
 
 3. **Run the Pipeline**
-
+   
+```
 python src/fetch_weather.py
 python src/transform_data.py
 python src/load_to_postgres.py
+```
 
 ## Database Schema
 
