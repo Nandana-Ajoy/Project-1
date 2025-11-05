@@ -58,7 +58,7 @@ python src/load_to_postgres.py
 
 ## Database Schema
 
-erDiagram
+
     CITY_INFO {
         int city_id PK
         string city_name
@@ -76,21 +76,23 @@ erDiagram
 
 ## Sample CRUD Operations
 
--- Insert a city
-INSERT INTO city_info (city_name, country) VALUES ('Trivandrum', 'India');
+Insert a city
+```INSERT INTO city_info (city_name, country) VALUES ('Trivandrum', 'India');```
 
--- Insert weather data
+Insert weather data
+```
 INSERT INTO weather_data (time, temperature_c, humidity_percent, windspeed_ms, city_id)
 VALUES ('2025-11-05 10:00:00', 29.5, 78, 3.5, 1);
+```
 
--- Query weather data
-SELECT * FROM weather_data;
+Query weather data
+```SELECT * FROM weather_data;```
 
--- Update temperature
-UPDATE weather_data SET temperature_c = 32.0 WHERE weather_id = 1;
+Update temperature
+```UPDATE weather_data SET temperature_c = 32.0 WHERE weather_id = 1;```
 
--- Delete a record
-DELETE FROM weather_data WHERE weather_id = 3;
+Delete a record
+```DELETE FROM weather_data WHERE weather_id = 3;```
 
 ## References
 Open-Meteo API
