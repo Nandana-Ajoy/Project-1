@@ -9,8 +9,8 @@ def load_data_to_postgres():
             host="localhost",
             database="weather_db",
             user="postgres",
-            password="postgres",
-            port="5433"
+            password="CdY9u2g44",
+            port="5432"
         )
 
         cursor = connection.cursor()
