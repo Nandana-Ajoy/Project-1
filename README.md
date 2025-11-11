@@ -14,27 +14,28 @@ The pipeline fetches hourly weather data from the **Open-Meteo API** for Trivand
 
 
 ## Project Structure
-
+```
 Project-1/
 │
 ├── src/
-│ ├── fetch_weather.py 
-│ ├── transform_data.py 
-│ ├── load_to_postgres.py 
-│ ├── raw_weather_data.json 
-│ ├── clean_weather_data.csv 
-│ └── docker-compose.yml 
+│   ├── fetch_weather.py
+│   ├── transform_data.py
+│   ├── load_to_postgres.py
+│   ├── raw_weather_data.json
+│   └── clean_weather_data.csv
 │
-├── venv/ 
-│ ├── Include/
-│ ├── Lib/
-│ ├── Scripts/
-│ └── pyvenv.cfg
+├── docker-compose.yml
+├── venv/
+│   ├── Include/
+│   ├── Lib/
+│   ├── Scripts/
+│   └── pyvenv.cfg
 │
-├── .gitignore 
-├── README.md 
+├── .gitignore
+├── README.md
 └── requirements.txt
-
+└── requirements.txt
+```
 ## Setup Instructions
 
 1. **Clone Repository**
@@ -49,14 +50,16 @@ venv\Scripts\activate
 pip install -r requirements.txt
 
 3. **Run the Pipeline**
-
+   
+```
 python src/fetch_weather.py
 python src/transform_data.py
 python src/load_to_postgres.py
+```
 
 ## Database Schema
 
-erDiagram
+
     CITY_INFO {
         int city_id PK
         string city_name
@@ -74,23 +77,35 @@ erDiagram
 
 ## Sample CRUD Operations
 
--- Insert a city
+Insert a city
+```
 INSERT INTO city_info (city_name, country) VALUES ('Trivandrum', 'India');
+```
 
--- Insert weather data
+Insert weather data
+```
 INSERT INTO weather_data (time, temperature_c, humidity_percent, windspeed_ms, city_id)
 VALUES ('2025-11-05 10:00:00', 29.5, 78, 3.5, 1);
+```
 
--- Query weather data
+Query weather data
+```
 SELECT * FROM weather_data;
+```
 
--- Update temperature
+Update temperature
+```
 UPDATE weather_data SET temperature_c = 32.0 WHERE weather_id = 1;
+```
 
--- Delete a record
+Delete a record
+```
 DELETE FROM weather_data WHERE weather_id = 3;
+```
 
 ## References
+```
 Open-Meteo API
 PostgreSQL Documentation
 psycopg2 Documentation
+```
