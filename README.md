@@ -12,7 +12,6 @@ The pipeline fetches hourly weather data from the **Open-Meteo API** for Trivand
 - **Docker** : Run PostgreSQL in a container  
 - **Git & GitHub**: Version control  
 
----
 
 ## Project Structure
 
