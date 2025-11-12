@@ -4,7 +4,6 @@ import pandas as pd
 def load_data_to_postgres():
     connection = None
     try:
-        #Connect to PostgreSQL container
         connection = psycopg2.connect(
             host="localhost",
             database="weather_db",
@@ -15,7 +14,6 @@ def load_data_to_postgres():
 
         cursor = connection.cursor()
 
-        #Create table if it doesn’t exist
         create_table_query = """
         CREATE TABLE IF NOT EXISTS weather_data (
             time TIMESTAMP,
@@ -26,7 +24,6 @@ def load_data_to_postgres():
         """
         cursor.execute(create_table_query)
 
-        #Load data from cleaned CSV
         df = pd.read_csv("clean_weather_data.csv")
 
         for _, row in df.iterrows():
