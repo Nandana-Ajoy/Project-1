@@ -16,7 +16,7 @@ def fetch_weather_data():
         "timezone": "Asia/Kolkata"
     }
 
-    print("Fetching weather data for Trivandrum...")
+    print("Fetching weather data...")
     response = requests.get(url, params=params)
 
     response.raise_for_status()
